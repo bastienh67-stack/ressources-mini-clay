@@ -5,12 +5,12 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="color-scheme" content="light">
 <title>Diagnostic gratuit · Bastien Hüe</title>
-<meta name="description" content="8 questions, presque toutes en un clic, puis 20 minutes ensemble pour savoir par où commencer avec Claude dans ton activité de recrutement.">
+<meta name="description" content="8 questions en une minute, puis 20 minutes ensemble pour savoir quoi confier à Claude en premier dans ton activité de recrutement.">
 <link rel="canonical" href="https://ressources.mini-clay.fr/diagnostic/">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="fr_FR">
 <meta property="og:title" content="Diagnostic gratuit · Bastien Hüe">
-<meta property="og:description" content="8 questions, presque toutes en un clic, puis 20 minutes ensemble pour savoir par où commencer avec Claude dans ton activité de recrutement.">
+<meta property="og:description" content="8 questions en une minute, puis 20 minutes ensemble pour savoir quoi confier à Claude en premier dans ton activité de recrutement.">
 <meta property="og:url" content="https://ressources.mini-clay.fr/diagnostic/">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@600;700;800;900&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Kalam:wght@400;700&display=swap">
@@ -266,8 +266,8 @@ body.v2 footer{margin-top:96px}
   <div class="hero-txt">
     <a class="diag-retour" href="/guide-claude-recrutement/">Retour au guide</a>
     <span class="pill">Diagnostic gratuit</span>
-    <h1>20 minutes pour savoir par où commencer</h1>
-    <p class="sous">Tu réponds à 8 questions, presque toutes en un clic. Ensuite, tu choisis ton créneau.</p>
+    <h1>20 minutes pour savoir quoi confier à Claude en premier</h1>
+    <p class="sous">Réponds à 8 questions en une minute, puis choisis l'heure de notre appel.</p>
     <div class="puces"><span><b>8</b> questions</span><span><b>1</b> minute pour répondre</span><span><b>20</b> minutes ensemble</span></div>
   </div>
   <aside class="auteur" aria-label="Qui te reçoit">
@@ -281,7 +281,7 @@ body.v2 footer{margin-top:96px}
 </section>
 <form id="diag" class="diag-form" novalidate>
   <p class="diag-titre">Tes 8 questions</p>
-  <p class="diag-intro">Une minute, presque tout en un clic. Ensuite, tu choisis ton créneau.</p>
+  <p class="diag-intro">Une minute pour répondre. L'agenda s'affiche juste après.</p>
   <div class="diag-progres" aria-hidden="true"><span>Question <b id="diag-num">1</b> sur 8</span><span class="diag-barre"><i id="diag-barre"></i></span></div>
 <fieldset class="etape" data-etape="1">
   <legend>À qui je parle ?</legend>
@@ -322,14 +322,14 @@ body.v2 footer{margin-top:96px}
   <div class="diag-actions"><button type="button" class="diag-precedent">Retour</button><button type="submit" class="offre-btn">Suivant</button></div>
 </fieldset>
 <fieldset class="etape" data-etape="7" hidden>
-  <legend>L'accompagnement coûte 1 990 € HT : peux-tu démarrer ce mois-ci ?</legend>
-  <div class="choix"><label><input type="radio" name="demarrage" value="Oui"><span>Oui</span></label><label><input type="radio" name="demarrage" value="Dans 1 à 3 mois"><span>Dans 1 à 3 mois</span></label><label><input type="radio" name="demarrage" value="Je veux d&#x27;abord voir"><span>Je veux d'abord voir</span></label></div>
+  <legend>Quel est ton chiffre d'affaires mensuel ?</legend>
+  <div class="choix"><label><input type="radio" name="ca" value="Moins de 5 000 €"><span>Moins de 5 000 €</span></label><label><input type="radio" name="ca" value="5 000 à 10 000 €"><span>5 000 à 10 000 €</span></label><label><input type="radio" name="ca" value="10 000 à 20 000 €"><span>10 000 à 20 000 €</span></label><label><input type="radio" name="ca" value="20 000 à 50 000 €"><span>20 000 à 50 000 €</span></label><label><input type="radio" name="ca" value="Plus de 50 000 €"><span>Plus de 50 000 €</span></label></div>
   <p class="diag-erreur" role="alert" hidden></p>
   <div class="diag-actions"><button type="button" class="diag-precedent">Retour</button><button type="submit" class="offre-btn">Suivant</button></div>
 </fieldset>
 <fieldset class="etape" data-etape="8" hidden>
-  <legend>Dans 3 mois, quelle seule chose aurait changé ?</legend>
-  <textarea name="dans3mois" rows="4" maxlength="500" aria-label="Ta réponse"></textarea>
+  <legend>Quels sont les changements que tu espères avec l'IA ?</legend>
+  <textarea name="attentes" rows="4" maxlength="500" aria-label="Ta réponse"></textarea>
   <div class="diag-actions"><button type="button" class="diag-precedent">Retour</button><button type="submit" class="offre-btn">Voir les créneaux</button></div>
 </fieldset>
 </form>
@@ -369,7 +369,7 @@ body.v2 footer{margin-top:96px}
 (function () {
   var form = document.getElementById('diag');
   if (!form) return;
-  var LIBELLES = {"activite": "Activité", "ia": "Avec l'IA", "temps": "Ce qui prend le plus de temps", "semaine": "Temps par semaine", "decision": "Décision d'investir", "demarrage": "Démarrage, à 1 990 € HT"};
+  var LIBELLES = {"activite": "Activité", "ia": "Avec l'IA", "temps": "Ce qui prend le plus de temps", "semaine": "Temps par semaine", "decision": "Décision d'investir", "ca": "Chiffre d'affaires mensuel"};
   var LIEN_CAL = "https://cal.com/bastien-hue/diagnostic";
   var CAL_LINK = "bastien-hue/diagnostic";
   var etapes = Array.prototype.slice.call(form.querySelectorAll('.etape'));
@@ -424,7 +424,7 @@ body.v2 footer{margin-top:96px}
     }
     var choisi = etapes[n].querySelector('input[type="radio"]:checked');
     if (choisi) donnees[choisi.name] = choisi.value;
-    if (n === etapes.length - 1) { donnees.dans3mois = form.elements.dans3mois.value.trim(); donnees.termine = true; }
+    if (n === etapes.length - 1) { donnees.attentes = form.elements.attentes.value.trim(); donnees.termine = true; }
     window.envoyerCollecte(donnees);
   }
 
@@ -441,8 +441,8 @@ body.v2 footer{margin-top:96px}
       var choisi = form.querySelector('input[name="' + nom + '"]:checked');
       return LIBELLES[nom] + ' : ' + (choisi ? choisi.value : '');
     });
-    var libre = form.elements.dans3mois.value.trim();
-    lignes.push('Dans 3 mois : ' + (libre || 'pas de réponse'));
+    var libre = form.elements.attentes.value.trim();
+    lignes.push("Ce que tu espères avec l'IA : " + (libre || 'pas de réponse'));
     var linkedin = form.elements.linkedin.value.trim();
     if (linkedin) lignes.push('LinkedIn : ' + linkedin);
     return lignes.join('\n');
