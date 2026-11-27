@@ -131,6 +131,8 @@ footer { margin-top: 48px; padding-top: 16px; border-top: 1px solid var(--line);
 .offre-haut p{color:var(--muted)}
 .offre-haut .offre-titre{color:var(--ink)}
 .offre-haut .offre-note{color:var(--accent-ink)}
+.offre-haut .offre-alt{margin:18px 0 0;padding-top:12px;border-top:1px dashed var(--line);color:var(--muted)}
+.offre-haut .offre-alt a{color:var(--accent-ink)}
 @media (max-width:640px){.offre{grid-template-columns:1fr;padding:22px}.offre-haut{grid-template-columns:1fr;padding:0}.offre-visuel{border-right:0;border-bottom:2px solid var(--ink)}.offre-btn{white-space:normal;text-align:center}}
 
 :root{--t-claude:#eaf1fb;--t-claude-b:#9fbde6;--t-claude-i:#3b6fb6;--t-plus:#fff4da;--t-plus-b:#f0c76e;--t-check:#eaf5ec;--t-check-b:#93cba2}
@@ -235,6 +237,7 @@ body.v2 .apropos-txt .apropos-nom{font:900 clamp(26px,4.2vw,34px)/1.05 var(--fon
 .apropos-lien{font-weight:700;color:var(--accent-ink);text-decoration:underline;text-underline-offset:3px}
 .apropos-lien:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
 .apropos-parcours{margin-top:36px}
+body.v2 .mention-mesure{margin:28px 0 0;font-size:13px;color:var(--muted)}
 .sc-plus{width:26px;height:26px;color:var(--ink);justify-self:center}
 @media (max-width:640px){.apropos-carte{grid-template-columns:1fr;gap:16px;padding:22px}.apropos-photo{flex-direction:row;gap:12px}.apropos-photo img{width:84px;height:84px}.apropos-note svg{transform:none}}
 
@@ -269,13 +272,14 @@ body.v2 .som .t .sk{display:block;margin-top:4px;font:600 12.5px/1.3 var(--font-
 <aside class="offre offre-haut" aria-label="Accompagnement">
   <div class="offre-visuel">
     <span class="ov-titre">Diagnostic gratuit</span>
-    <span class="ov-puces"><span>20 minutes</span><span>6 questions</span></span>
+    <span class="ov-puces"><span>20 minutes</span><span>8 questions</span></span>
   </div>
   <div class="offre-corps">
     <span class="offre-lab">Mon accompagnement</span>
     <p class="offre-titre">Ce guide t'apprend à tout faire seul.</p>
     <p>Si tu préfères, on l'installe ensemble, séance après séance.</p>
-    <div class="offre-action"><a class="offre-btn" href="https://cal.com/bastien-hue/diagnostic" target="_blank" rel="noopener" data-offre="haut">Voir par où commencer →</a><span class="offre-note"><svg viewBox="0 0 40 24" aria-hidden="true" focusable="false"><path d="M37 19 C 27 22, 13 18, 8 7" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/><path d="M3.5 12 L8 5 L14.5 9" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>20 minutes, c'est offert</span></div>
+    <div class="offre-action"><a class="offre-btn" href="/diagnostic/" target="_blank" rel="noopener" data-offre="haut">Voir par où commencer →</a><span class="offre-note"><svg viewBox="0 0 40 24" aria-hidden="true" focusable="false"><path d="M37 19 C 27 22, 13 18, 8 7" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/><path d="M3.5 12 L8 5 L14.5 9" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>20 minutes, c'est offert</span></div>
+    <p class="offre-alt">Tu veux surtout que ta prospection soit prête chaque matin ? C'est le travail de Mini-Clay : <a href="/diagnostic/" target="_blank" rel="noopener" data-offre="mini-clay-haut">on en parle au même rendez-vous</a>.</p>
   </div>
 </aside>
 <nav class="som" id="sommaire" aria-label="Sommaire">
@@ -490,7 +494,8 @@ Ce que tu ne fais jamais : publier, envoyer, payer, supprimer. Tu ne lances pas 
     <p class="offre-titre">Tu ne sais pas par quel skill commencer ?</p>
     <p>En 20 minutes, on regarde ta semaine et tes outils, et je te dis lesquels créer en premier.</p>
   </div>
-  <div class="offre-action"><a class="offre-btn" href="https://cal.com/bastien-hue/diagnostic" target="_blank" rel="noopener" data-offre="chapitre-3">Mon diagnostic gratuit →</a><span class="offre-note"><svg viewBox="0 0 40 24" aria-hidden="true" focusable="false"><path d="M37 19 C 27 22, 13 18, 8 7" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/><path d="M3.5 12 L8 5 L14.5 9" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>20 minutes, c'est offert</span></div>
+  <div class="offre-action"><a class="offre-btn" href="/diagnostic/" target="_blank" rel="noopener" data-offre="chapitre-3">Mon diagnostic gratuit →</a><span class="offre-note"><svg viewBox="0 0 40 24" aria-hidden="true" focusable="false"><path d="M37 19 C 27 22, 13 18, 8 7" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/><path d="M3.5 12 L8 5 L14.5 9" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>20 minutes, c'est offert</span></div>
+  <p class="offre-alt">Tu veux surtout que ta prospection soit prête chaque matin ? C'est le travail de Mini-Clay : <a href="/diagnostic/" target="_blank" rel="noopener" data-offre="mini-clay-chapitre-3">on en parle au même rendez-vous</a>.</p>
 </aside>
 <section class="part" id="p-04"><div class="opener"><div class="gros" aria-hidden="true">04</div><div class="lab">Chapitre 04</div><h2 class="op">Veille des CV et messages d&#x27;approche</h2></div><div class="bloc bloc-skill"><h2>Ton skill : <code>/approche</code></h2><p>Pour les profils que tu choisis, il rédige un message d'approche court et personnel, que tu envoies toi-même. Tu le lances sur une ligne du tableur.</p><p>Le tableur, c'est ta routine du matin qui le remplit. Chaque matin, elle ouvre ta CVthèque, lance ta recherche enregistrée et relève les CV déposés depuis la veille. Elle les classe selon tes critères, sans écarter personne.</p><p>Il travaille avec tes outils : il lit la ligne du tableur, puis l'annonce ou la fiche dans le dossier du client, sur ton stockage. Il prépare la version mail en brouillon. Le prompt lui fait d'abord relire la partie « Mes outils » de ton Projet.</p></div><figure class="schema" aria-label="Le chapitre en un coup d'œil"><div class="sc-pas sc-toi"><span class="sc-lab">Tu donnes</span><p>Ta recherche enregistrée dans ta CVthèque.</p></div><svg class="sc-fleche" viewBox="0 0 56 28" aria-hidden="true" focusable="false"><path d="M3 17 C 16 7, 32 25, 49 13" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"/><path d="M40.5 8.5 L50 13 L42 19.5" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg><div class="sc-pas sc-claude"><span class="sc-lab">Claude prépare</span><p>Les CV du jour classés et un message d'approche par profil choisi.</p></div><svg class="sc-fleche" viewBox="0 0 56 28" aria-hidden="true" focusable="false"><path d="M3 17 C 16 7, 32 25, 49 13" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"/><path d="M40.5 8.5 L50 13 L42 19.5" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg><div class="sc-pas sc-toi"><span class="sc-lab">Tu vérifies</span><p>Un vrai détail du parcours cité. Puis tu envoies toi-même.</p></div></figure><h2>Quand tu le lances</h2><ol class="flux"><li><strong>La recherche.</strong> C'est celle du chapitre 3, écrite avec /booleen et enregistrée dans ta CVthèque.</li><li><strong>La routine du matin.</strong> À l'heure que tu choisis, Claude ouvre la CVthèque avec Claude in Chrome, relève les nouveaux CV et remplit le tableur du poste.</li><li><strong>Ton tri.</strong> Tu lis le tableur et tu choisis qui contacter. Claude a classé ; toi, tu décides.</li><li><strong>Les messages.</strong> Pour chaque profil retenu, lance /approche sur sa ligne du tableur. Il écrit un message d'approche à partir de son parcours et du poste.</li><li><strong>L'envoi.</strong> Tu relis le brouillon, tu envoies toi-même et tu notes le contact dans ton suivi (chapitre 7).</li></ol><h2>Le prompt qui crée ton skill</h2><div class="prompt insec"><div class="hd"><span class="k">PROMPT À COLLER DANS CLAUDE</span><span class="t">Le prompt qui crée /approche</span><button class="copier" type="button">Copier</button></div><div class="bd">Crée-moi un skill. Écris ses consignes, montre-les-moi pour que je les corrige, puis enregistre-le.
 
@@ -618,9 +623,10 @@ Chaque jour ouvré à 12 h et à 17 h, lis les transcriptions arrivées dans <sp
     <span class="offre-lab">Diagnostic gratuit</span>
     <p class="offre-titre">Tu as la méthode. On l'installe ensemble chez toi ?</p>
     <p>Ce guide, c'est ce que je montre aux consultants que j'accompagne, séance après séance.</p>
-    <p>6 questions pour savoir par où commencer chez toi.</p>
+    <p>8 questions pour savoir par où commencer chez toi.</p>
   </div>
-  <div class="offre-action"><a class="offre-btn" href="https://cal.com/bastien-hue/diagnostic" target="_blank" rel="noopener" data-offre="milieu">Mon diagnostic gratuit →</a><span class="offre-note"><svg viewBox="0 0 40 24" aria-hidden="true" focusable="false"><path d="M37 19 C 27 22, 13 18, 8 7" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/><path d="M3.5 12 L8 5 L14.5 9" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>20 minutes, c'est offert</span></div>
+  <div class="offre-action"><a class="offre-btn" href="/diagnostic/" target="_blank" rel="noopener" data-offre="milieu">Mon diagnostic gratuit →</a><span class="offre-note"><svg viewBox="0 0 40 24" aria-hidden="true" focusable="false"><path d="M37 19 C 27 22, 13 18, 8 7" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/><path d="M3.5 12 L8 5 L14.5 9" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>20 minutes, c'est offert</span></div>
+  <p class="offre-alt">Tu veux surtout que ta prospection soit prête chaque matin ? C'est le travail de Mini-Clay : <a href="/diagnostic/" target="_blank" rel="noopener" data-offre="mini-clay-milieu">on en parle au même rendez-vous</a>.</p>
 </aside>
 <section class="part" id="p-07"><div class="opener"><div class="gros" aria-hidden="true">07</div><div class="lab">Chapitre 07</div><h2 class="op">ATS, fiches candidats et suivi des process</h2></div><div class="bloc bloc-skill"><h2>Ton skill : <code>/ats</code></h2><p>Il reporte dans ton ATS ce que tu as validé : le compte rendu, la rémunération, l'étape. Il te montre un récapitulatif, champ par champ, et n'enregistre qu'après ton accord. Il met aussi à jour la ligne du candidat dans ton tableau de suivi.</p><p>Il travaille avec tes outils : il retrouve le compte rendu validé sur ton stockage, puis remplit la fiche dans ton ATS. Si ton ATS n'a ni connecteur ni API, il passe par Claude in Chrome, comme toi. Le prompt lui fait d'abord ouvrir une fiche existante pour en lister les champs.</p></div><figure class="schema" aria-label="Le chapitre en un coup d'œil"><div class="sc-pas sc-toi"><span class="sc-lab">Tu donnes</span><p>Ce que tu as validé : compte rendu, rémunération, étape.</p></div><svg class="sc-fleche" viewBox="0 0 56 28" aria-hidden="true" focusable="false"><path d="M3 17 C 16 7, 32 25, 49 13" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"/><path d="M40.5 8.5 L50 13 L42 19.5" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg><div class="sc-pas sc-claude"><span class="sc-lab">Claude prépare</span><p>Ton ATS à jour et le récap de tes process chaque matin.</p></div><svg class="sc-fleche" viewBox="0 0 56 28" aria-hidden="true" focusable="false"><path d="M3 17 C 16 7, 32 25, 49 13" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"/><path d="M40.5 8.5 L50 13 L42 19.5" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg><div class="sc-pas sc-toi"><span class="sc-lab">Tu vérifies</span><p>Une prochaine action datée pour chaque candidat.</p></div></figure><h2>Quand tu le lances</h2><ol class="flux"><li><strong>Une seule source.</strong> Le compte rendu validé, rangé dans le dossier du poste. C'est là que /ats va le chercher.</li><li><strong>Le skill /ats.</strong> Dès que tu as validé un compte rendu, lance-le avec le prénom du candidat et le poste. Il ouvre la fiche du candidat dans ton ATS, remplit les champs, te montre le récapitulatif et n'enregistre qu'après ton accord.</li><li><strong>Le tableau de suivi.</strong> Un tableur avec une ligne par candidat et par poste, l'étape, et la prochaine action datée. /ats y met à jour la ligne du candidat.</li><li><strong>Le récap du matin.</strong> Une routine lit le tableau et ta messagerie, puis t'envoie par mail ce qui t'attend aujourd'hui.</li><li><strong>Les candidats sans nouvelles.</strong> Chaque vendredi, Claude liste ceux qui attendent ton retour depuis plus d'une semaine et prépare un message pour chacun.</li></ol><h2>Le prompt qui crée ton skill</h2><div class="prompt insec"><div class="hd"><span class="k">PROMPT À COLLER DANS CLAUDE</span><span class="t">Le prompt qui crée /ats</span><button class="copier" type="button">Copier</button></div><div class="bd">Crée-moi un skill. Écris ses consignes, montre-les-moi pour que je les corrige, puis enregistre-le.
 
@@ -869,11 +875,12 @@ Ce que tu ne fais jamais : publier, envoyer, payer, supprimer. Tu t'arrêtes si 
     <span class="offre-lab">Diagnostic gratuit</span>
     <p class="offre-titre">Et si on l'installait ensemble ?</p>
     <p>Tu as tout le guide. Si tu préfères le mettre en place avec moi, on l'installe chez toi, séance après séance.</p>
-    <p>6 questions pour savoir par où commencer.</p>
+    <p>8 questions pour savoir par où commencer.</p>
   </div>
-  <div class="offre-action"><a class="offre-btn" href="https://cal.com/bastien-hue/diagnostic" target="_blank" rel="noopener" data-offre="fin">Mon diagnostic gratuit →</a><span class="offre-note"><svg viewBox="0 0 40 24" aria-hidden="true" focusable="false"><path d="M37 19 C 27 22, 13 18, 8 7" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/><path d="M3.5 12 L8 5 L14.5 9" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>20 minutes, c'est offert</span></div>
-  <p class="offre-alt">Tu veux surtout que ta prospection soit prête chaque matin ? C'est le travail de Mini-Clay : <a href="https://cal.com/bastien-hue/diagnostic" target="_blank" rel="noopener" data-offre="mini-clay">on en parle au même rendez-vous</a>.</p>
+  <div class="offre-action"><a class="offre-btn" href="/diagnostic/" target="_blank" rel="noopener" data-offre="fin">Mon diagnostic gratuit →</a><span class="offre-note"><svg viewBox="0 0 40 24" aria-hidden="true" focusable="false"><path d="M37 19 C 27 22, 13 18, 8 7" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/><path d="M3.5 12 L8 5 L14.5 9" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>20 minutes, c'est offert</span></div>
+  <p class="offre-alt">Tu veux surtout que ta prospection soit prête chaque matin ? C'est le travail de Mini-Clay : <a href="/diagnostic/" target="_blank" rel="noopener" data-offre="mini-clay">on en parle au même rendez-vous</a>.</p>
 </aside>
+<p class="mention-mesure">Ce site compte les visites et les clics sur ses boutons, sans cookie ni donnée personnelle.</p>
 <a class="haut" href="#sommaire">Retour au sommaire</a></section>
 </div>
 <script>
@@ -890,6 +897,28 @@ Ce que tu ne fais jamais : publier, envoyer, payer, supprimer. Tu t'arrêtes si 
     try {
       navigator.clipboard.writeText(bd.innerText).then(function () { fin('Copié'); }, function () { selectionner(bd); fin('Sélectionné'); });
     } catch (e) { selectionner(bd); fin('Sélectionné'); }
+  });
+})();
+(function () {
+  var URL_COLLECTE = "https://script.google.com/macros/s/AKfycbyUvMWvrUpKqVt5LFLklnLvBDhJg4khHa8w-sVsbEeLNg1CU5KprBzXd5UqkAO3Uiwv/exec";
+  var session = Math.random().toString(36).slice(2, 10) + Date.now().toString(36);
+  var depuis = '';
+  try { depuis = document.referrer ? new URL(document.referrer).hostname : ''; } catch (e) {}
+  function envoyer(donnees) {
+    donnees.session = session;
+    donnees.page = location.pathname;
+    donnees.hote = location.hostname;
+    if (!donnees.depuis) donnees.depuis = depuis;
+    try {
+      fetch(URL_COLLECTE, { method: 'POST', mode: 'no-cors', keepalive: true,
+        headers: { 'Content-Type': 'text/plain;charset=utf-8' }, body: JSON.stringify(donnees) });
+    } catch (e) {}
+  }
+  window.envoyerCollecte = envoyer;
+  envoyer({ type: 'visite' });
+  document.addEventListener('click', function (ev) {
+    var lien = ev.target.closest ? ev.target.closest('[data-offre]') : null;
+    if (lien) envoyer({ type: 'clic', offre: lien.getAttribute('data-offre') });
   });
 })();
 </script>
