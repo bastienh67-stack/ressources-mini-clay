@@ -223,6 +223,21 @@ body.v2 .schema p{margin:6px 0 0;font:400 17px/1.3 'Kalam',cursive}
 .sc-fleche{width:52px;height:26px;color:var(--ink);justify-self:center}
 @media (max-width:640px){.schema{grid-template-columns:1fr;gap:4px}.sc-fleche{transform:rotate(90deg);height:40px}}
 
+.apropos{margin:30px 0 10px}
+.apropos-carte{display:grid;grid-template-columns:auto minmax(0,1fr);gap:26px;align-items:center;background:var(--surface);border:2px solid var(--ink);border-radius:18px;padding:26px 28px;box-shadow:8px 8px 0 var(--accent)}
+.apropos-photo{display:flex;flex-direction:column;align-items:center;gap:8px}
+.apropos-photo img{width:104px;height:104px;border-radius:50%;object-fit:cover;border:2px solid var(--ink);box-shadow:4px 4px 0 var(--ink);display:block}
+.apropos-note{display:inline-flex;align-items:flex-start;gap:4px;font:700 19px/1 'Kalam',cursive;color:var(--accent-ink);transform:rotate(-5deg);white-space:nowrap}
+.apropos-note svg{width:30px;height:18px;flex:none;transform:scaleX(-1)}
+.apropos-parcours .marque{white-space:nowrap}
+body.v2 .apropos-txt p{margin:0 0 12px;font-size:17px;line-height:1.5;color:var(--ink)}
+body.v2 .apropos-txt .apropos-nom{font:900 clamp(26px,4.2vw,34px)/1.05 var(--font-display);letter-spacing:-.015em;margin:0 0 10px}
+.apropos-lien{font-weight:700;color:var(--accent-ink);text-decoration:underline;text-underline-offset:3px}
+.apropos-lien:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+.apropos-parcours{margin-top:36px}
+.sc-plus{width:26px;height:26px;color:var(--ink);justify-self:center}
+@media (max-width:640px){.apropos-carte{grid-template-columns:1fr;gap:16px;padding:22px}.apropos-photo{flex-direction:row;gap:12px}.apropos-photo img{width:84px;height:84px}.apropos-note svg{transform:none}}
+
 body.v2 .objectif{margin:18px 0 0;font:600 16.5px/1.5 var(--font-body);color:var(--muted)}
 body.v2 .objectif code{font:700 14.5px/1 var(--font-mono);background:var(--accent);color:#0b1422;border:1.5px solid #0b1422;border-radius:7px;padding:3px 7px}
 .bloc-skill{background:var(--band);color:var(--on-band);box-shadow:6px 6px 0 var(--accent)}
@@ -838,9 +853,17 @@ Testé sur : <span class="ph">[cas 1]</span>, <span class="ph">[cas 2]</span>, 
 Quand une information manque : demande-la-moi au lieu d'inventer.
 Ce que tu ne fais jamais : publier, envoyer, payer, supprimer. Tu t'arrêtes si un écran ou un fichier ne ressemble pas à ce qui est prévu.</div></div><h2>Teste ton skill</h2><p>Lance ton nouveau skill sur un vrai cas, puis vérifie ces points. Quand il les coche sur trois cas de suite, ton skill est prêt.</p><ul class="check"><li>Il fait une seule chose.</li><li>Ce qu'il lit et ce qu'il produit sont écrits.</li><li>Il demande au lieu d'inventer.</li><li>Il ne publie, n'envoie, ne paie et ne supprime rien.</li><li>Il a été testé sur trois cas réels.</li><li>Il est noté dans ta liste de skills.</li></ul><h2>Ta routine</h2><p>Quand ton skill donne le bon résultat à chaque fois, programme-le à l'heure où tu en as besoin. Puis, une fois par mois, relis tes skills avec Claude : ceux à découper, à fusionner, à supprimer.</p><a class="haut" href="#sommaire">Retour au sommaire</a></section><section class="part" id="p-poursymettre"><div class="opener"><div class="lab">Pour s&#x27;y mettre</div><h2 class="op">Ton plan de 7 jours</h2></div><p>Un chapitre par jour, sur un vrai poste. À la fin de la semaine, tu as cinq skills et une routine qui tournent.</p>
 <ol class="flux"><li><strong>Jour 1 : installer.</strong> Crée ton Projet, fais-toi interviewer pour écrire tes consignes (soigne « Mes outils »), branche ta messagerie, ton agenda et ton espace de stockage, installe Claude in Chrome et vérifie quels outils ont une API. Règle la confidentialité. (Avant de commencer)</li><li><strong>Jour 2 : ton skill <code>/brief</code>.</strong> Crée-le, puis lance-le sur un poste ouvert : les questions avant l'appel, la fiche et le compte rendu juste après. Envoie le compte rendu au client dans l'heure. (Chapitre 1)</li><li><strong>Jour 3 : tes skills <code>/annonce</code> et <code>/diffuser</code>.</strong> Crée-les, rédige l'annonce à partir de la fiche, puis lance les temps 1 et 2 de /diffuser. (Chapitre 2)</li><li><strong>Jour 4 : tes skills <code>/booleen</code> et <code>/approche</code>.</strong> Crée-les, teste tes chaînes booléennes, crée ton alerte, puis lance la veille du matin une première fois à la main. (Chapitres 3 et 4)</li><li><strong>Jour 5 : tes skills <code>/questions-precal</code> et <code>/cr-precal</code>.</strong> Crée-les, prépare la trame de préqualification, puis fais les comptes rendus de tes appels du jour avec /cr-precal. (Chapitres 5 et 6)</li><li><strong>Jour 6 : tes skills <code>/cible</code> et <code>/prospection</code>.</strong> Crée-les, choisis cinq annonces, trouve les bons interlocuteurs, écris cinq premiers emails avec un candidat précis. (Chapitres 10 et 11)</li><li><strong>Jour 7 : ta première routine.</strong> Fais l'inventaire de tes tâches, choisis le skill le plus fiable de la semaine et programme-le. (Chapitre 12)</li></ol>
-<p>La deuxième semaine, ajoute un skill par jour. Au bout d'un mois, ta journée commence avec ce qui est déjà prêt.</p><a class="haut" href="#sommaire">Retour au sommaire</a></section><section class="part" id="p-apropos"><div class="opener"><div class="lab">À propos</div><h2 class="op">Qui a écrit ce guide</h2></div><p>Je m'appelle Bastien Hüe. J'ai passé huit ans en cabinet de recrutement, avec deux à trois heures par jour à lire des annonces.</p>
-<p>J'accompagne les consultants qui veulent automatiser leurs tâches chronophages avec l'IA, et j'automatise la prospection des réseaux et cabinets de recrutement.</p>
-<p>Ce guide rassemble ce que je montre aux consultants que j'accompagne, séance après séance. J'ai aussi construit Mini-Clay, l'outil qui prépare chaque matin la prospection de cabinets et de réseaux de recruteurs.</p>
+<p>La deuxième semaine, ajoute un skill par jour. Au bout d'un mois, ta journée commence avec ce qui est déjà prêt.</p><a class="haut" href="#sommaire">Retour au sommaire</a></section><section class="part" id="p-apropos"><div class="opener"><div class="lab">À propos</div><h2 class="op">Qui a écrit ce guide</h2></div><div class="apropos">
+  <div class="apropos-carte">
+    <div class="apropos-photo"><img src="bastien-hue.png" alt="Bastien Hüe" width="104" height="104"><span class="apropos-note"><svg viewBox="0 0 40 24" aria-hidden="true" focusable="false"><path d="M37 19 C 27 22, 13 18, 8 7" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/><path d="M3.5 12 L8 5 L14.5 9" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>c'est moi</span></div>
+    <div class="apropos-txt">
+      <p class="apropos-nom">Bastien Hüe</p>
+      <p>J'accompagne les consultants qui veulent automatiser leurs tâches chronophages avec l'IA.</p>
+      <a class="apropos-lien" href="https://www.linkedin.com/in/bastien-h" target="_blank" rel="noopener">Me retrouver sur LinkedIn</a>
+    </div>
+  </div>
+  <figure class="schema apropos-parcours" aria-label="Mon parcours"><div class="sc-pas sc-toi"><span class="sc-lab">Avant</span><p>Huit ans en cabinet de recrutement, avec deux à trois heures par jour à lire des annonces.</p></div><svg class="sc-fleche" viewBox="0 0 56 28" aria-hidden="true" focusable="false"><path d="M3 17 C 16 7, 32 25, 49 13" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"/><path d="M40.5 8.5 L50 13 L42 19.5" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg><div class="sc-pas sc-claude"><span class="sc-lab">Aujourd'hui</span><p>Ce guide rassemble ce que je montre aux consultants que j'accompagne, séance après séance.</p></div><svg class="sc-plus" viewBox="0 0 28 28" aria-hidden="true" focusable="false"><path d="M14.5 4 C 13.6 10, 14.8 17, 13.8 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"/><path d="M4 14.6 C 10 13.6, 17.5 15, 24 13.8" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"/></svg><div class="sc-pas sc-toi"><span class="sc-lab">Et aussi</span><p>J'ai construit <span class="marque">Mini-Clay</span>, l'outil qui prépare chaque matin la prospection des cabinets et des réseaux de recruteurs.</p></div></figure>
+</div>
 <aside class="offre offre-fin" aria-label="Accompagnement">
   <div class="offre-corps">
     <span class="offre-lab">Diagnostic gratuit</span>
@@ -851,7 +874,6 @@ Ce que tu ne fais jamais : publier, envoyer, payer, supprimer. Tu t'arrêtes si 
   <div class="offre-action"><a class="offre-btn" href="https://cal.com/bastien-hue/diagnostic" target="_blank" rel="noopener" data-offre="fin">Mon diagnostic gratuit →</a><span class="offre-note"><svg viewBox="0 0 40 24" aria-hidden="true" focusable="false"><path d="M37 19 C 27 22, 13 18, 8 7" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/><path d="M3.5 12 L8 5 L14.5 9" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>20 minutes, c'est offert</span></div>
   <p class="offre-alt">Tu veux surtout que ta prospection soit prête chaque matin ? C'est le travail de Mini-Clay : <a href="https://cal.com/bastien-hue/diagnostic" target="_blank" rel="noopener" data-offre="mini-clay">on en parle au même rendez-vous</a>.</p>
 </aside>
-<p>Tu peux aussi me retrouver sur LinkedIn : linkedin.com/in/bastien-h</p>
 <a class="haut" href="#sommaire">Retour au sommaire</a></section>
 </div>
 <script>
