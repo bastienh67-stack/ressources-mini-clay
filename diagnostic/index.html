@@ -256,7 +256,6 @@ body.v2 footer{margin-top:96px}
 #cal-inline{width:100%;min-height:560px;margin-top:18px;border:2px solid var(--ink);border-radius:18px;overflow:hidden;background:var(--surface)}
 .diag-secours{margin-top:14px;font-size:15px}
 .diag-secours a{color:var(--accent-ink);font-weight:700}
-.diag-confid{margin:28px 0 0;font-size:14px;color:var(--muted)}
 @media (max-width:640px){.diag-pour{grid-template-columns:1fr;margin-top:40px}.diag-form{padding:22px 18px 20px;margin-top:44px}.diag-actions{flex-wrap:wrap}}
 @media (prefers-reduced-motion:reduce){.diag-barre i,.choix label{transition:none}}
 </style>
@@ -273,7 +272,7 @@ body.v2 footer{margin-top:96px}
   </div>
   <aside class="auteur" aria-label="Qui te reçoit">
     <div class="qui"><img class="avatar photo" src="/guide-claude-recrutement/bastien-hue.png" alt="Bastien Hüe" width="64" height="64"><div class="nom">Bastien Hüe</div></div>
-    <ul><li>J'accompagne les consultants qui veulent automatiser leurs tâches avec l'IA.</li><li>J'ai aussi créé Mini-Clay, qui prépare chaque matin la prospection des cabinets : environ 50 utilisateurs.</li></ul>
+    <ul><li>J'accompagne les consultants qui veulent automatiser leurs tâches avec l'IA.</li><li>J'ai créé Mini-Clay, qui prospecte à ta place et t'amène des leads.</li></ul>
   </aside>
 </header>
 <section class="diag-pour" aria-label="Pour qui c'est">
@@ -340,15 +339,17 @@ body.v2 footer{margin-top:96px}
   <div id="cal-inline"></div>
   <p class="diag-secours">L'agenda ne s'affiche pas ? <a id="cal-lien" href="https://cal.com/bastien-hue/diagnostic" target="_blank" rel="noopener">Ouvre-le dans un nouvel onglet</a>.</p>
 </section>
-<p class="diag-confid">Tes réponses me sont envoyées au fur et à mesure, même si tu ne réserves pas : elles servent seulement à préparer notre échange. Le site compte aussi les visites et les clics, sans cookie.</p>
 </div>
 <script>
 (function () {
   var URL_COLLECTE = "https://script.google.com/macros/s/AKfycbyUvMWvrUpKqVt5LFLklnLvBDhJg4khHa8w-sVsbEeLNg1CU5KprBzXd5UqkAO3Uiwv/exec";
+  // les aperçus sur l'ordinateur (localhost) n'écrivent rien dans le Google Sheet, sauf avec ?mesure=1 dans l'adresse
+  var enLocal = /^(localhost|127\.0\.0\.1)$/.test(location.hostname) && location.search.indexOf('mesure=1') < 0;
   var session = Math.random().toString(36).slice(2, 10) + Date.now().toString(36);
   var depuis = '';
   try { depuis = document.referrer ? new URL(document.referrer).hostname : ''; } catch (e) {}
   function envoyer(donnees) {
+    if (enLocal) return;
     donnees.session = session;
     donnees.page = location.pathname;
     donnees.hote = location.hostname;

@@ -266,7 +266,7 @@ body.v2 .som .t .sk{display:block;margin-top:4px;font:600 12.5px/1.3 var(--font-
   </div>
   <aside class="auteur" aria-label="L'auteur">
     <div class="qui"><img class="avatar photo" src="bastien-hue.png" alt="Bastien Hüe" width="64" height="64"><div class="nom">Bastien Hüe</div></div>
-    <ul><li>J'accompagne les consultants qui veulent automatiser leurs tâches avec l'IA.</li><li>J'ai aussi créé Mini-Clay, qui prépare chaque matin la prospection des cabinets : environ 50 utilisateurs.</li></ul>
+    <ul><li>J'accompagne les consultants qui veulent automatiser leurs tâches avec l'IA.</li><li>J'ai créé Mini-Clay, qui prospecte à ta place et t'amène des leads.</li></ul>
   </aside>
 </header>
 <aside class="offre offre-haut" aria-label="Accompagnement">
@@ -901,10 +901,13 @@ Ce que tu ne fais jamais : publier, envoyer, payer, supprimer. Tu t'arrêtes si 
 })();
 (function () {
   var URL_COLLECTE = "https://script.google.com/macros/s/AKfycbyUvMWvrUpKqVt5LFLklnLvBDhJg4khHa8w-sVsbEeLNg1CU5KprBzXd5UqkAO3Uiwv/exec";
+  // les aperçus sur l'ordinateur (localhost) n'écrivent rien dans le Google Sheet, sauf avec ?mesure=1 dans l'adresse
+  var enLocal = /^(localhost|127\.0\.0\.1)$/.test(location.hostname) && location.search.indexOf('mesure=1') < 0;
   var session = Math.random().toString(36).slice(2, 10) + Date.now().toString(36);
   var depuis = '';
   try { depuis = document.referrer ? new URL(document.referrer).hostname : ''; } catch (e) {}
   function envoyer(donnees) {
+    if (enLocal) return;
     donnees.session = session;
     donnees.page = location.pathname;
     donnees.hote = location.hostname;
